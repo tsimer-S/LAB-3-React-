@@ -1,11 +1,12 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useBasket } from '../contexts/BasketContext';
+import { useAuth } from '../contexts/AuthContext';
 import './Header.css';
 
 function Header() {
   const { getItemCount } = useBasket();
+  const { user, logout } = useAuth();
 
   return (
     <header className="app-header">
@@ -24,6 +25,31 @@ function Header() {
           </Link>
           <Link to="/orders" className="nav-link">Мои заказы</Link>
           <Link to="/about" className="nav-link">О нас</Link>
+          
+          {user ? (
+            <>
+              <span className="nav-link" style={{ color: '#bbdefb' }}>
+                👋 {user.firstName}
+              </span>
+              <button 
+                onClick={logout}
+                className="nav-link"
+                style={{ 
+                  background: 'transparent', 
+                  border: 'none', 
+                  cursor: 'pointer',
+                  color: 'white'
+                }}
+              >
+                Выйти
+              </button>
+            </>
+          ) : (
+            <>
+              <Link to="/login" className="nav-link">Войти</Link>
+              <Link to="/register" className="nav-link">Регистрация</Link>
+            </>
+          )}
         </nav>
         <div className="header-stats">
           <div className="stat-item">

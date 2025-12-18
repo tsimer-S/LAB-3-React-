@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useBasket } from '../contexts/BasketContext';
-import productData from '../movieData';
+import productData from '../ProductData';
 import './ProductCatalog.css';
 
 const ProductCatalog = () => {

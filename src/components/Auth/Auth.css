@@ -1,0 +1,121 @@
+.auth-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(76, 175, 80, 0.15);
+  border: 2px solid #c8e6c9;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.auth-header h2 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.auth-header p {
+  color: #558b2f;
+}
+
+.auth-header a {
+  color: #2e7d32;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-header a:hover {
+  text-decoration: underline;
+}
+
+.auth-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.auth-form .form-group {
+  margin-bottom: 20px;
+}
+
+.auth-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #33691e;
+  font-weight: 500;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #a5d6a7;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.auth-form input:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+.auth-form input.error {
+  border-color: #f44336;
+}
+
+.error-message {
+  color: #f44336;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  display: block;
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.auth-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #43a047, #1b5e20);
+  transform: translateY(-2px);
+}
+
+.auth-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.auth-link {
+  text-align: center;
+  margin-top: 20px;
+  color: #558b2f;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .auth-container {
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  .auth-form .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
